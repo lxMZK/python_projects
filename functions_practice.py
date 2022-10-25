@@ -6,7 +6,7 @@ def pack(a, b, c):
     return [a, b, c]
 
 
-def eat_lunch(*items):
+def eat_lunch(items):
     print('First I eat ' + items[0])
     for i in items[1:]:
         print('Next I eat ' + i)
@@ -14,4 +14,4 @@ def eat_lunch(*items):
 
 hello()
 print(pack('a', 'b', 'c'))
-eat_lunch('a', 'b', 'c', 'd', 'e', 'f')
+eat_lunch(['a', 'b', 'c', 'd', 'e', 'f'])
