@@ -10,7 +10,7 @@ def play():
     rnd = random.randint(1, high)
 
     for i in range(numTries):
-        guess = int(input(f"Attempt {i + 1} Guess the number: "))
+        guess = validateInput(f"Attempt {i + 1} Guess the number: ")
         if guess == rnd:
             print("You win!")
             break
