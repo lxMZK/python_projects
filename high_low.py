@@ -27,8 +27,6 @@ def validateInput(message):
         except ValueError:
             print("Please input an integer.")
             continue
-        else:
-            break
 
 
 play()
