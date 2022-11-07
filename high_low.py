@@ -4,23 +4,8 @@ import random
 def play():
     random.seed()
 
-    while True:
-        try:
-            numTries = int(input('Input number of tries: '))
-        except ValueError:
-            print("Please input an integer.")
-            continue
-        else:
-            break
-
-    while True:
-        try:
-            high = int(input('Input upper bound: '))
-        except ValueError:
-            print("Please input an integer.")
-            continue
-        else:
-            break
+    numTries = validateInput('Input number of tries:')
+    high = validateInput('Input upper bound: ')
 
     rnd = random.randint(1, high)
 
@@ -33,6 +18,17 @@ def play():
             print("Too High")
         elif guess < rnd:
             print("Too Low")
+
+
+def validateInput(message):
+    while True:
+        try:
+            return int(input(message))
+        except ValueError:
+            print("Please input an integer.")
+            continue
+        else:
+            break
 
 
 play()
